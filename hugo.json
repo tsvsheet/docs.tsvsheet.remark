@@ -1,17 +1,33 @@
 {
-  "baseURL": "https://example.org/",
-  "title": "Project Documentation",
+  "baseURL": "https://tsvsheet.github.io/docs.tsvsheet.remark/",
+  "title": "tsvsheet.remark",
   "publishDir": "_site",
   "enableRobotsTXT": true,
   "markup": {
     "goldmark": {
       "renderHooks": {
-        "link": { "useEmbedded": "fallback" },
-        "image": { "useEmbedded": "fallback" }
+        "link": {
+          "useEmbedded": "fallback"
+        },
+        "image": {
+          "useEmbedded": "fallback"
+        }
       }
     }
   },
   "params": {
-    "description": "Public documentation for the project."
+    "mainSite": "https://tsvsheet.com",
+    "description": "tsvsheet for JS markdown pipelines — remark and markdown-it plugins that compute fenced sheet blocks through the embedded engine and emit static HTML."
+  },
+  "disableKinds": [
+    "taxonomy",
+    "term"
+  ],
+  "module": {
+    "imports": [
+      {
+        "path": "github.com/tsvsheet/theme.tsvsheet"
+      }
+    ]
   }
 }
